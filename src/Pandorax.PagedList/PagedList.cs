@@ -62,12 +62,12 @@ namespace Pandorax.PagedList
         {
             if (pageNumber < 1)
             {
-                throw new ArgumentOutOfRangeException(nameof(pageNumber), "Page cannot be less than 1");
+                throw new ArgumentOutOfRangeException(nameof(pageNumber), "The specified page number cannot be less than one.");
             }
 
             if (pageSize < 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(pageSize), "Page size cannot be less than 0");
+                throw new ArgumentOutOfRangeException(nameof(pageSize), "The specified page size cannot be less than one.");
             }
 
             _subset.AddRange(subset);
