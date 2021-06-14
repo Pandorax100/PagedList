@@ -11,7 +11,6 @@
     <Version>1.0.0</Version>
     <PackageLicenseUrl>https://raw.githubusercontent.com/Pandorax100/PagedList/master/LICENSE.md</PackageLicenseUrl>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
