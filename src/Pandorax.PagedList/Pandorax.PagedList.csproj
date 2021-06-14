@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net5.0;netstandard2.1;netstandard2.0;netstandard1.0</TargetFrameworks>
+    <PackageId>Pandorax.PagedList</PackageId>
+    <Authors>Liam</Authors>
+    <Description>A paged list utility designed for .NET</Description>
+    <PackageProjectUrl>https://github.com/Pandorax100/PagedList</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Pandorax100/PagedList</RepositoryUrl>
+    <NeutralLanguage>en-GB</NeutralLanguage>
+    <Version>1.0.0</Version>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/Pandorax100/PagedList/master/LICENSE.md</PackageLicenseUrl>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.333">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
