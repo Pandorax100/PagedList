@@ -8,7 +8,7 @@
     <PackageProjectUrl>https://github.com/Pandorax100/PagedList</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Pandorax100/PagedList</RepositoryUrl>
     <NeutralLanguage>en-GB</NeutralLanguage>
-    <Version>1.0.0</Version>
+    <Version>0.0.0-alpha1</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
