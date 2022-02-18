@@ -23,7 +23,11 @@ namespace Pandorax.PagedList.EntityFrameworkCore
         /// <returns>A subset of this collection of objects that can be individually accessed by index.</returns>
         /// <exception cref="ArgumentOutOfRangeException">The page number must be greater than zero.</exception>
         /// <exception cref="ArgumentOutOfRangeException">The page size must be greater than zero.</exception>
-        public static async Task<IPagedList<T>> ToPagedListAsync<T>(this IQueryable<T> query, int pageNumber, int pageSize, CancellationToken cancellationToken)
+        public static async Task<IPagedList<T>> ToPagedListAsync<T>(
+            this IQueryable<T> query,
+            int pageNumber,
+            int pageSize,
+            CancellationToken cancellationToken = default)
         {
             if (pageNumber <= 0)
             {
