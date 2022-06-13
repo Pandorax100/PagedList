@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.3;netcoreapp3.1;net5.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
     <PackageId>Pandorax.PagedList.EntityFrameworkCore</PackageId>
     <Authors>Liam</Authors>
     <Description>A helper library for Pandorax.PagedList to generate paged lists asynchronously using EntityFrameworkCore</Description>
     <PackageProjectUrl>https://github.com/Pandorax100/PagedList</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Pandorax100/PagedList</RepositoryUrl>
     <NeutralLanguage>en-GB</NeutralLanguage>
-    <Version>0.0.0-alpha2</Version>
+    <Version>0.0.0-alpha3</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>
@@ -18,11 +18,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.0.0" Condition="$(TargetFramework) == 'netstandard1.3'" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.0" Condition="$(TargetFramework) == 'netcoreapp3.1'" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.0" Condition="$(TargetFramework) == 'net5.0'" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0" Condition="$(TargetFramework) == 'net6.0'" />
-    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.406">
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="1.0.0" />
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>

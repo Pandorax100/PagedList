@@ -17,10 +17,10 @@ namespace Pandorax.PagedList.EntityFrameworkCore
         /// </summary>
         /// <typeparam name="T">The type of object the collection should contain.</typeparam>
         /// <param name="query">The collection of objects to be divided into pages.</param>
-        /// <param name="pageNumber">The one-based index of the subset of objects to be contained by this instance.</param>
+        /// <param name="pageNumber">The one-based index of the page.</param>
         /// <param name="pageSize">The maximum size of any individual page.</param>
         /// <param name="cancellationToken">A <see cref="CancellationToken"/> to observe while waiting for the task to complete.</param>
-        /// <returns>A subset of this collection of objects that can be individually accessed by index.</returns>
+        /// <returns>A <see cref="IPagedList{T}"/>.</returns>
         /// <exception cref="ArgumentOutOfRangeException">The page number must be greater than zero.</exception>
         /// <exception cref="ArgumentOutOfRangeException">The page size must be greater than zero.</exception>
         public static async Task<IPagedList<T>> ToPagedListAsync<T>(

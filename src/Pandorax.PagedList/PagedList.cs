@@ -8,17 +8,17 @@ namespace Pandorax.PagedList
     /// <inheritdoc cref="IPagedList{T}"/>
     public class PagedList<T> : IPagedList<T>
     {
-        private readonly List<T> _subset = new List<T>();
+        private readonly List<T> _page = new List<T>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PagedList{T}"/> class that divides the supplied enumerable into pages the size of the supplied <paramref name="pageSize"/>. The instance then only containes the objects contained in the subset specified by index.
+        /// Initializes a new instance of the <see cref="PagedList{T}"/> class that divides the supplied enumerable into pages the size of the supplied <paramref name="pageSize"/>. The instance then only containes the objects contained in the page specified by index.
         /// </summary>
-        /// <param name="superset">The collection of objects to be divided into subsets.</param>
+        /// <param name="source">The collection of objects to be divided into pages.</param>
         /// <param name="pageNumber">The one-based index of the current page.</param>
         /// <param name="pageSize">The maximum size of any individual page.</param>
         /// <exception cref="ArgumentOutOfRangeException">The specified index cannot be less than zero.</exception>
         /// <exception cref="ArgumentOutOfRangeException">The specified page size cannot be less than one.</exception>
-        public PagedList(IEnumerable<T> superset, int pageNumber, int pageSize)
+        public PagedList(IEnumerable<T> source, int pageNumber, int pageSize)
         {
             if (pageNumber < 1)
             {
@@ -31,7 +31,7 @@ namespace Pandorax.PagedList
             }
 
             // Set source to blank list if superset is null to prevent exceptions
-            TotalItemCount = superset == null ? 0 : superset.Count();
+            TotalItemCount = source == null ? 0 : source.Count();
             PageSize = pageSize;
             PageNumber = pageNumber;
             TotalPageCount = TotalItemCount > 0
@@ -39,11 +39,11 @@ namespace Pandorax.PagedList
                         : 0;
 
             // Add items to internal list
-            if (superset != null && TotalItemCount > 0)
+            if (source != null && TotalItemCount > 0)
             {
-                _subset.AddRange(pageNumber == 1
-                    ? superset.Skip(0).Take(pageSize).ToList()
-                    : superset.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList());
+                _page.AddRange(pageNumber == 1
+                    ? source.Skip(0).Take(pageSize).ToList()
+                    : source.Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList());
             }
         }
 
@@ -70,7 +70,7 @@ namespace Pandorax.PagedList
                 throw new ArgumentOutOfRangeException(nameof(pageSize), "The specified page size cannot be less than one.");
             }
 
-            _subset.AddRange(subset);
+            _page.AddRange(subset);
             PageNumber = pageNumber;
             PageSize = pageSize;
             TotalItemCount = totalItemCount;
@@ -78,7 +78,7 @@ namespace Pandorax.PagedList
         }
 
         /// <inheritdoc />
-        public int Count => _subset.Count;
+        public int Count => _page.Count;
 
         /// <inheritdoc />
         public int TotalPageCount { get; }
@@ -92,7 +92,6 @@ namespace Pandorax.PagedList
         /// <inheritdoc />
         public int PageSize { get; }
 
-#if !NET5_0
         /// <inheritdoc />
         public bool HasPreviousPage => PageNumber > 1;
 
@@ -104,16 +103,12 @@ namespace Pandorax.PagedList
 
         /// <inheritdoc />
         public bool IsLastPage => PageNumber >= TotalPageCount;
-#endif
 
-        /// <summary>
-        /// Gets the element at the specified index.
-        /// </summary>
-        /// <param name = "index">The zero-based index of the element to get.</param>
-        public T this[int index] => _subset[index];
+        /// <inheritdoc />
+        public T this[int index] => _page[index];
 
         /// <inheritdoc/>
-        public IEnumerator<T> GetEnumerator() => _subset.GetEnumerator();
+        public IEnumerator<T> GetEnumerator() => _page.GetEnumerator();
 
         /// <inheritdoc/>
         IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
