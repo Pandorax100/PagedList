@@ -9,7 +9,7 @@
     <PackageProjectUrl>https://github.com/Pandorax100/PagedList</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Pandorax100/PagedList</RepositoryUrl>
     <NeutralLanguage>en-GB</NeutralLanguage>
-    <Version>0.0.0-alpha2</Version>
+    <Version>0.0.0-alpha3</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
   </PropertyGroup>

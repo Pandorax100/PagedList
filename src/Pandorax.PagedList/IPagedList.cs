@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 
 namespace Pandorax.PagedList
@@ -5,9 +6,8 @@ namespace Pandorax.PagedList
     /// <summary>
     /// Represents a subset of a collection of objects.
     /// </summary>
-    /// <typeparam name="T">The type of object the collection should contain.</typeparam>
-    /// <seealso cref="IEnumerable{T}"/>
-    public interface IPagedList<out T> : IEnumerable<T>
+    /// <seealso cref="IEnumerable"/>
+    public interface IPagedList : IEnumerable
     {
         /// <summary>
         /// Gets the total number of pages.
@@ -53,7 +53,15 @@ namespace Pandorax.PagedList
         /// Gets the number of elements contained on this page.
         /// </summary>
         int Count { get; }
+    }
 
+    /// <summary>
+    /// Represents a subset of a collection of objects.
+    /// </summary>
+    /// <typeparam name="T">The type of object the collection should contain.</typeparam>
+    /// <seealso cref="IEnumerable{T}"/>
+    public interface IPagedList<out T> : IEnumerable<T>, IPagedList
+    {
         /// <summary>
         /// Gets the element at the specified index from the current page.
         /// </summary>
