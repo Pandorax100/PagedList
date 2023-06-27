@@ -12,13 +12,13 @@ namespace Pandorax.PagedList
         /// </summary>
         /// <typeparam name="T">The type of object the collection should contain.</typeparam>
         /// <param name="source">The collection of objects to be divided into pages.</param>
-        /// <param name="pageNumber">The one-based index of the page.</param>
+        /// <param name="pageIndex">The one-based index of the page.</param>
         /// <param name="pageSize">The maximum size of any individual page.</param>
         /// <returns>A <see cref="IPagedList{T}"/> from this collection.</returns>
         /// <seealso cref="PagedList{T}"/>
-        public static IPagedList<T> ToPagedList<T>(this IEnumerable<T> source, int pageNumber, int pageSize)
+        public static IPagedList<T> ToPagedList<T>(this IEnumerable<T> source, int pageIndex, int pageSize)
         {
-            return new PagedList<T>(source, pageNumber, pageSize);
+            return new PagedList<T>(source, pageIndex, pageSize);
         }
     }
 }
