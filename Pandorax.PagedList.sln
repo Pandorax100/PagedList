@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31402.337
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35521.163 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{28859FBD-EA1F-4C8E-8E81-D69FFC19C3E6}"
 	ProjectSection(SolutionItems) = preProject
@@ -21,8 +21,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pandorax.PagedList.Test", "test\Pandorax.PagedList.Test\Pandorax.PagedList.Test.csproj", "{A951D287-8B01-4842-88FF-2B83618B6B46}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pandorax.PagedList.EntityFrameworkCore", "src\Pandorax.PagedList.EntityFrameworkCore\Pandorax.PagedList.EntityFrameworkCore.csproj", "{56F03E49-8689-436D-9356-CE0E2D47E609}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pandorax.PagedList.EntityFramework", "src\Pandorax.PagedList.EntityFramework\Pandorax.PagedList.EntityFramework.csproj", "{0E393B92-169E-4504-9744-A30A7A0946BF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -70,18 +68,6 @@ Global
 		{56F03E49-8689-436D-9356-CE0E2D47E609}.Release|x64.Build.0 = Release|Any CPU
 		{56F03E49-8689-436D-9356-CE0E2D47E609}.Release|x86.ActiveCfg = Release|Any CPU
 		{56F03E49-8689-436D-9356-CE0E2D47E609}.Release|x86.Build.0 = Release|Any CPU
-		{0E393B92-169E-4504-9744-A30A7A0946BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0E393B92-169E-4504-9744-A30A7A0946BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0E393B92-169E-4504-9744-A30A7A0946BF}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{0E393B92-169E-4504-9744-A30A7A0946BF}.Debug|x64.Build.0 = Debug|Any CPU
-		{0E393B92-169E-4504-9744-A30A7A0946BF}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{0E393B92-169E-4504-9744-A30A7A0946BF}.Debug|x86.Build.0 = Debug|Any CPU
-		{0E393B92-169E-4504-9744-A30A7A0946BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0E393B92-169E-4504-9744-A30A7A0946BF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0E393B92-169E-4504-9744-A30A7A0946BF}.Release|x64.ActiveCfg = Release|Any CPU
-		{0E393B92-169E-4504-9744-A30A7A0946BF}.Release|x64.Build.0 = Release|Any CPU
-		{0E393B92-169E-4504-9744-A30A7A0946BF}.Release|x86.ActiveCfg = Release|Any CPU
-		{0E393B92-169E-4504-9744-A30A7A0946BF}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -90,7 +76,6 @@ Global
 		{7A7FF4B6-68A1-4FEB-9827-FF06AEAEC24F} = {64D4A07F-9C8E-4C08-A293-18544FA71390}
 		{A951D287-8B01-4842-88FF-2B83618B6B46} = {EEAB18A0-7D5C-4F81-BB52-1DC3B1C1BF49}
 		{56F03E49-8689-436D-9356-CE0E2D47E609} = {64D4A07F-9C8E-4C08-A293-18544FA71390}
-		{0E393B92-169E-4504-9744-A30A7A0946BF} = {64D4A07F-9C8E-4C08-A293-18544FA71390}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F0C51713-9708-43F4-B4BA-210BF7CD7BD9}
