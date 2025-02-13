@@ -8,9 +8,10 @@
     <PackageProjectUrl>https://github.com/Pandorax100/PagedList</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Pandorax100/PagedList</RepositoryUrl>
     <NeutralLanguage>en-GB</NeutralLanguage>
-    <Version>1.0.0-alpha001</Version>
+    <Version>1.0.0</Version>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -28,6 +29,13 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Pandorax.PagedList\Pandorax.PagedList.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
